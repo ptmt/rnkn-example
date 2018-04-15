@@ -11,6 +11,7 @@
 #import <React/RCTRootView.h>
 #import "ReactNativeNavigation/ReactNativeNavigation.h"
 #import "RNNCustomViewController.h"
+#import "kviews.h"
 
 @implementation AppDelegate
 
@@ -21,7 +22,7 @@
   jsCodeLocation = [[RCTBundleURLProvider sharedSettings] jsBundleURLForBundleRoot:@"index" fallbackResource:nil];
   
   [ReactNativeNavigation bootstrap:jsCodeLocation launchOptions:launchOptions];
-  
+
   [ReactNativeNavigation registerExternalComponent:@"RNNCustomComponent" callback:^UIViewController *(NSDictionary *props, RCTBridge *bridge) {
     return [[RNNCustomViewController alloc] initWithProps:props];
   }];

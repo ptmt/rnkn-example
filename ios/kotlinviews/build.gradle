@@ -1,23 +1,22 @@
-buildscript {
-    ext.kotlin_version = '1.2.21'
 
-    repositories {
-        mavenCentral()
+    buildscript {
+        repositories {
+            mavenCentral()
+            maven { url "https://dl.bintray.com/jetbrains/kotlin-native-dependencies" }
+        }
+
+        dependencies {
+            classpath "org.jetbrains.kotlin:kotlin-native-gradle-plugin:0.6.2"
+        }
     }
 
-    dependencies {
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+
+apply plugin: 'konan'
+
+konan.targets = ['iphone', 'iphone_sim']
+
+konanArtifacts {
+    framework('kviews') {
+      extraOpts '-module_name', 'k'
     }
-}
-
-apply plugin: 'kotlin'
-
-group = 'org.jetbrains.kotlin.konan.samples'
-
-repositories {
-    mavenCentral()
-}
-
-dependencies {
-    compile "org.jetbrains.kotlin:kotlin-stdlib"
 }

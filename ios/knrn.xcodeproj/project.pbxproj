@@ -40,6 +40,8 @@
 		ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBDB9271DFEBF0700ED6528 /* libRCTBlob.a */; };
 		BB79CABEFD95426998390343 /* ReactNativeNavigationTests.xctest in Frameworks */ = {isa = PBXBuildFile; fileRef = 84ADBBFF86134E319B4AEE7B /* ReactNativeNavigationTests.xctest */; };
 		D422F330207E846C00CA48EB /* RNNCustomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D422F32F207E846C00CA48EB /* RNNCustomViewController.m */; };
+		D4C723A120835CC2009C8119 /* kviews.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4C7239A20835CC2009C8119 /* kviews.framework */; };
+		D4C723A220835CC2009C8119 /* kviews.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D4C7239A20835CC2009C8119 /* kviews.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F4ED83384E5140ADAED72E03 /* libReactNativeNavigation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F627D72A9D4143C3BF669263 /* libReactNativeNavigation.a */; };
 /* End PBXBuildFile section */
 
@@ -331,7 +333,28 @@
 			remoteGlobalIDString = 7B49FEBB1E95090800DEB3EA;
 			remoteInfo = ReactNativeNavigationTests;
 		};
+		D4C7239F20835CC2009C8119 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D4C7239920835CC2009C8119;
+			remoteInfo = kviews;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D4C72392208359B5009C8119 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				D4C723A220835CC2009C8119 /* kviews.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		008F07F21AC5B25A0029DE68 /* main.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = main.jsbundle; sourceTree = "<group>"; };
@@ -364,6 +387,10 @@
 		ADBDB91F1DFEBF0600ED6528 /* RCTBlob.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTBlob.xcodeproj; path = "../node_modules/react-native/Libraries/Blob/RCTBlob.xcodeproj"; sourceTree = "<group>"; };
 		D422F32E207E842800CA48EB /* RNNCustomViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = RNNCustomViewController.h; path = knrn/RNNCustomViewController.h; sourceTree = "<group>"; };
 		D422F32F207E846C00CA48EB /* RNNCustomViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = RNNCustomViewController.m; path = knrn/RNNCustomViewController.m; sourceTree = "<group>"; };
+		D4C7239A20835CC2009C8119 /* kviews.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = kviews.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4C723A920835D5D009C8119 /* KotlinUIViewController.kt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = KotlinUIViewController.kt; sourceTree = "<group>"; };
+		D4C723AA20835F99009C8119 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D4C723AB20835FAA009C8119 /* kviews.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = kviews.h; path = kotlinviews/build/konan/bin/iphone_sim/kviews.framework/Headers/kviews.h; sourceTree = SOURCE_ROOT; };
 		F627D72A9D4143C3BF669263 /* libReactNativeNavigation.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libReactNativeNavigation.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -385,6 +412,7 @@
 				146834051AC3E58100842450 /* libReact.a in Frameworks */,
 				5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */,
 				00C302E51ABCBA2D00DB3ED1 /* libRCTActionSheet.a in Frameworks */,
+				D4C723A120835CC2009C8119 /* kviews.framework in Frameworks */,
 				00C302E71ABCBA2D00DB3ED1 /* libRCTGeolocation.a in Frameworks */,
 				00C302E81ABCBA2D00DB3ED1 /* libRCTImage.a in Frameworks */,
 				133E29F31AD74F7200F7D852 /* libRCTLinking.a in Frameworks */,
@@ -600,9 +628,11 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				D4C723A820835D5D009C8119 /* kviews */,
 				13B07FAE1A68108700A75B9A /* knrn */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* knrnTests */,
+				D4C7239B20835CC2009C8119 /* kviews */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				D422F303207E83C000CA48EB /* Recovered References */,
@@ -619,6 +649,7 @@
 				00E356EE1AD99517003FC87E /* knrnTests.xctest */,
 				2D02E47B1E0B4A5D006451C7 /* knrn-tvOS.app */,
 				2D02E4901E0B4A5D006451C7 /* knrn-tvOSTests.xctest */,
+				D4C7239A20835CC2009C8119 /* kviews.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -650,6 +681,24 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		D4C7239B20835CC2009C8119 /* kviews */ = {
+			isa = PBXGroup;
+			children = (
+				D4C723AB20835FAA009C8119 /* kviews.h */,
+				D4C723AA20835F99009C8119 /* Info.plist */,
+			);
+			path = kviews;
+			sourceTree = "<group>";
+		};
+		D4C723A820835D5D009C8119 /* kviews */ = {
+			isa = PBXGroup;
+			children = (
+				D4C723A920835D5D009C8119 /* KotlinUIViewController.kt */,
+			);
+			name = kviews;
+			path = kotlinviews/src/main/kotlin/org/konan/kviews;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -679,10 +728,12 @@
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
+				D4C72392208359B5009C8119 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				D4C723A020835CC2009C8119 /* PBXTargetDependency */,
 			);
 			name = knrn;
 			productName = "Hello World";
@@ -725,6 +776,22 @@
 			productReference = 2D02E4901E0B4A5D006451C7 /* knrn-tvOSTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		D4C7239920835CC2009C8119 /* kviews */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D4C723A320835CC2009C8119 /* Build configuration list for PBXNativeTarget "kviews" */;
+			buildPhases = (
+				D4C7239520835CC2009C8119 /* Sources */,
+				D4C723A620835CDB009C8119 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = kviews;
+			productName = kviews;
+			productReference = D4C7239A20835CC2009C8119 /* kviews.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -746,6 +813,10 @@
 						CreatedOnToolsVersion = 8.2.1;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 2D02E47A1E0B4A5D006451C7;
+					};
+					D4C7239920835CC2009C8119 = {
+						CreatedOnToolsVersion = 9.3;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -820,6 +891,7 @@
 				00E356ED1AD99517003FC87E /* knrnTests */,
 				2D02E47A1E0B4A5D006451C7 /* knrn-tvOS */,
 				2D02E48F1E0B4A5D006451C7 /* knrn-tvOSTests */,
+				D4C7239920835CC2009C8119 /* kviews */,
 			);
 		};
 /* End PBXProject section */
@@ -1163,6 +1235,19 @@
 			shellPath = /bin/sh;
 			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
 		};
+		D4C723A620835CDB009C8119 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$SRCROOT/kotlinviews/gradlew\" -p \"$SRCROOT/kotlinviews\" \"compileKonanKviewsIphone_sim\" --no-daemon -Pkonan.useEnvironmentVariables=true";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -1201,6 +1286,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D4C7239520835CC2009C8119 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -1213,6 +1305,11 @@
 			isa = PBXTargetDependency;
 			target = 2D02E47A1E0B4A5D006451C7 /* knrn-tvOS */;
 			targetProxy = 2D02E4911E0B4A5D006451C7 /* PBXContainerItemProxy */;
+		};
+		D4C723A020835CC2009C8119 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D4C7239920835CC2009C8119 /* kviews */;
+			targetProxy = D4C7239F20835CC2009C8119 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1290,8 +1387,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/kotlinviews/build/konan/bin/iphone_sim",
+				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-navigation/ios/**",
@@ -1313,7 +1415,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/kotlinviews/build/konan/bin/iphone_sim",
+				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-navigation/ios/**",
@@ -1549,6 +1656,92 @@
 			};
 			name = Release;
 		};
+		D4C723A420835CC2009C8119 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = kviews/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.konan.kviews;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		D4C723A520835CC2009C8119 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = kviews/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.konan.kviews;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1593,6 +1786,15 @@
 			buildConfigurations = (
 				83CBBA201A601CBA00E9B192 /* Debug */,
 				83CBBA211A601CBA00E9B192 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D4C723A320835CC2009C8119 /* Build configuration list for PBXNativeTarget "kviews" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D4C723A420835CC2009C8119 /* Debug */,
+				D4C723A520835CC2009C8119 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

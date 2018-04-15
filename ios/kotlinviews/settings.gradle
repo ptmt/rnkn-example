@@ -1,1 +1,9 @@
-rootProject.name = 'arithmetic-parser'
+rootProject.name = 'kotlinviews'
+
+def konanBuildPath = gradle.startParameter.projectProperties['konan.build']
+if (konanBuildPath != null) {
+    includeBuild(konanBuildPath)
+    gradle.allprojects {
+        it.extensions.extraProperties.set('konan.home', "$konanBuildPath/dist")
+    }
+}
